@@ -6,4 +6,6 @@ use App\Http\Controllers\OrderController;
 
 Route::get('/orders/user/{userId}', [OrderController::class, 'getOrdersByUser']);
 Route::get('/orders/product/{productId}', [OrderController::class, 'getOrdersByProduct']);
+Route::post('/orders', [OrderController::class, 'apiStore']);
+Route::get('/orders', [OrderController::class, 'apiIndex']);
 
